@@ -1,0 +1,378 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: var(--text-color);
+}
+:root{
+  --primary-color: #000430;
+  --secondary-color: #171c48;
+  --text-color: #fff;
+  --purple: #828dff;
+  --teal: #24fecc;
+}
+
+
+body{
+  background: var(--primary-color);
+}
+
+.container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: 7.5rem;
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 600px;
+}
+.stats-container{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 2px solid var(--purple);
+  border-radius:  20px;
+  padding: 20px;
+}
+
+.stats-details{
+  width: 100%;
+  margin-right: 30px;
+}
+
+#progressBar{
+  width: 100%;
+  height: 10px;
+  background: var(--secondary-color);
+  border: none;
+  border-radius: 10px;
+  margin-top: 20px;
+}
+
+#progress{
+  width: 0%;
+  height: 100%;
+  background: var(--teal);
+  border: none;
+  border-radius: 20px;
+  transition: all 0.3s ease;
+}
+
+
+
+#stats-numbers p{
+  width: 100px;
+  height: 100px;
+  border: none;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--purple);
+  font-size: 20px;
+  font-weight: bold;
+}
+
+
+
+form{
+  margin-top: 50px;
+  width: 100%;
+  display: flex;
+}
+
+input[type="text"]{
+  flex: 1;
+  font-size: 1.5ren;
+  padding: 0.75rem;
+  background: var(--secondary-color);
+  border: 1px solid var(--purple);
+  border-radius: 10px;
+  outline: none;
+}
+
+[placeholder]{
+  font-size: 1.8rem;
+}
+
+
+#button{
+  width: 80px;
+  height: 80px;
+  border: none;
+  border-radius: 50%;
+  background: var(--purple);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 2rem;
+  font-size: 2rem;
+  font-weight: bold;
+  outline: none;
+  transition: transform 0.3s ease;
+}
+#button:hover {
+  transform: translateY(-2px)scale(0.93);
+  color:var(--teal);
+  background: var(--secondary-color);
+}
+
+
+#taskList{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin-top: 1.8rem;
+  margin-right: auto;
+  margin-left: auto;
+  list-style-type: none;
+}
+
+.taskItem{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--secondary-color);
+  padding: 1rem;
+  border: none;
+  border-radius: 10px;
+  margin-top: 1.2rem;
+  margin-right: auto;
+  margin-left: auto;
+  overflow: hidden;
+}
+
+
+.task{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+}
+
+
+ .completed p{
+  text-decoration: line-through;
+  color: var(--teal);
+}
+
+.checkbox  {
+  width: 20px;
+  height: 40px;
+  border: 2px solid #ccc;
+  cursor: pointer;
+  margin-right: 1rem;
+  outline: none;
+}
+
+.icons img{
+  margin-top: auto;
+  margin-bottom: auto;
+  width: 30px;
+  height: 30px;
+  margin-right: 0.25rem;
+}
+
+@media(max-width: 320px){
+    .container{
+        width:100%
+    }
+    input[type="text"]{
+  width: 70%;
+  font-size: 1rem;
+  padding: 0.55em;
+  margin-left: 1rem;
+}
+}
+
+
+@media (max-width: 475px) {
+ .container {
+   width: 100%;
+   margin-left: auto;
+   margin-right: auto;
+   margin-top: 4rem;
+   padding-left: 0.5rem;
+   padding-right: 0.5rem;
+ }
+
+.stats-container{
+  width: 90%;
+  max-width: 475px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 2px solid var(--purple);
+  border-radius:  20px;
+  padding: 10px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.stats-details{
+  padding: 0.5em;
+}
+.stats-details h1{
+  font-size: 1.5rem;
+  color: var(--text-color);
+  padding-bottom: 0.3em;
+}
+
+#button{
+  width: 50px;
+  height: 50px;
+  border: none;
+  border-radius: 50%;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  font-size: 1.3rem;
+}
+
+input[type="text"]{
+  width: 70%;
+  font-size: 1.5rem;
+  padding: 0.55em;
+  margin-left: 1.05em;
+}
+
+#stats-numbers p{
+  width: 90px;
+  height: 90px;
+}
+
+.task{
+  font-size: 1.2rem;
+  margin-left: 0.25rem;
+}
+
+.taskItem{
+  width: 100%;
+  margin-top: 1.2rem;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 0.3rem;
+  padding-bottom: 0.3rem;
+  padding-left: 0.8rem;
+  padding-right: 0.8rem;
+}
+.checkbox {
+  width: 20px;
+  }
+}
+
+@media (max-width: 640px) {
+  .container {
+    max-width: 475px;
+    margin-right: auto;
+    margin-left: auto;
+    padding-right: 1.5rem;
+    padding-left: 1.5rem ;
+  
+  }
+  .taskItem{
+  width: 100%;
+  margin-top: 1.2rem;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 0.3rem;
+  padding-bottom: 0.3rem;
+  padding-left: 0.8rem;
+  padding-right: 0.8rem;
+}
+
+input[type="text"]{
+  width: 70%;
+  font-size: 1.5rem;
+  padding: 0.55em;
+  margin-left: 1.05em;
+}
+
+#button{
+  width: 50px;
+  height: 50px;
+  border: none;
+  border-radius: 50%;
+  margin-left: 1.55em;
+  margin-right: 1.25em;
+  font-size: 1.3rem;
+}
+@media (max-width: 768px) {
+  .container {
+    max-width: 640px;
+    margin-right: auto;
+    margin-left: auto;
+    padding-right: 1.5rem;
+    padding-left: 1.5rem ;
+  }
+  .taskItem{
+  width: 100%;
+  margin-top: 1.2rem;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 0.3rem;
+  padding-bottom: 0.3rem;
+  padding-left: 0.8rem;
+  padding-right: 0.8rem;
+}
+
+#button{
+  width: 50px;
+  height: 50px;
+  border: none;
+  border-radius: 50%;
+  margin-left: 1.55em;
+  margin-right: 1.25em;
+  font-size: 1.3rem;
+}
+@media (max-width: 1024px) {
+  .container {
+    max-width: 768px;
+    margin-right: auto;
+    margin-left: auto;
+    padding-right: 1.5rem;
+    padding-left: 1.5rem ;
+  
+  }
+  .taskItem{
+  width: 100%;
+  margin-top: 1.2rem;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 0.3rem;
+  padding-bottom: 0.3rem;
+  padding-left: 0.8rem;
+  padding-right: 0.8rem;
+}
+
+
+}
+@media (max-width: 1536px) {
+  .container {
+    max-width: 1024px;
+    margin-right: auto;
+    margin-left: auto;
+    padding-right: 1.5rem;
+    padding-left: 1.5rem ;
+  }
+  .taskItem{
+  width: 100%;
+  margin-top: 1.2rem;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 0.3rem;
+  padding-bottom: 0.3rem;
+  padding-left: 0.8rem;
+  padding-right: 0.8rem;
+}
+
+#progressBar{
+  width: 80%;
+  height: 10px;
+  background: var(--secondary-color);
+  border: none;
+  border-radius: 10px;
+  margin-top: 20px;
+}
+}
